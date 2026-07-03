@@ -6,7 +6,7 @@ import { RELEASE } from '#server/utils/config';
 export default defineNitroPlugin((nitroApp) => {
   console.log(`
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-┃   wg-easy - https://github.com/wg-easy/wg-easy   ┃
+┃   wg-easy - https://github.com/pavelrzn/wg-easy-sp   ┃
 ┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫
 ┃ wg-easy:  ${RELEASE.padEnd(38)} ┃
 ┃ Node:     ${process.version.padEnd(38)} ┃

@@ -4,7 +4,7 @@
       <a
         class="hover:underline"
         target="_blank"
-        href="https://github.com/wg-easy/wg-easy"
+        href="https://github.com/pavelrzn/wg-easy-sp/tree/feature/ip4_speed_limits"
         >WireGuard Easy</a
       >
       ({{ globalStore.information?.currentRelease }}) © 2021-2026 by
@@ -27,6 +27,14 @@
         href="https://github.com/wg-easy/wg-easy#donate"
         target="_blank"
         >{{ $t('layout.donate') }}</a
+      >
+      ·
+      <a
+        class="hover:underline"
+        href="https://tbank.ru/cf/39dmWNiTZ5h"
+        target="_blank"
+        title="Speed control & Android app"
+        >❤️ Speed control & Android app</a
       >
     </p>
   </footer>

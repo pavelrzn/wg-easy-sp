@@ -1,19 +1,20 @@
 import { defineEventHandler } from 'h3';
-import { gt } from 'semver';
 
 import Database from '#server/utils/Database';
-import { RELEASE, WG_ENV } from '#server/utils/config';
-import { cachedFetchLatestRelease } from '#server/utils/release';
+import { DOCKER_TAG, WG_ENV } from '#server/utils/config';
+import { cachedFetchLatestRelease, compareTags } from '#server/utils/release';
 
 export default defineEventHandler(async () => {
   const latestRelease = await cachedFetchLatestRelease();
-  const updateAvailable = gt(latestRelease.version, RELEASE);
+  const updateAvailable = latestRelease.version
+    ? compareTags(latestRelease.version, DOCKER_TAG) > 0
+    : false;
   const insecure = WG_ENV.INSECURE;
   const isAwg = WG_ENV.WG_EXECUTABLE === 'awg';
   const wgInterface = await Database.interfaces.get();
 
   return {
-    currentRelease: RELEASE,
+    currentRelease: DOCKER_TAG,
     latestRelease: latestRelease,
     updateAvailable,
     insecure,

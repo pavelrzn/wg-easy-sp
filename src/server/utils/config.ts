@@ -10,6 +10,9 @@ import {
 
 export const RELEASE = 'v' + packageJson.version;
 
+/** Current Docker image tag (e.g. "15.3c"). Used for update checking against Docker Hub. */
+export const DOCKER_TAG = process.env.DOCKER_TAG || packageJson.version;
+
 export const SERVER_DEBUG = createDebug('Server');
 
 export const OLD_ENV = {

@@ -1,5 +1,13 @@
 # WireGuard Easy
 
+> **wg-easy-sp** — форк [wg-easy](https://github.com/wg-easy/wg-easy) с ограничением скорости скачивания (download) на каждого клиента через Linux tc (HFSC). 
+> Только IPv4 — для корректной работы рекомендуется отключить IPv6 на сервере через env, а так же в allowed IPs удалить строку с IPv6. Но это не критично, на данный момент они чаще всего встречаются на speed tests. 
+> Для speed control есть REST API и мобильное приложение, для управления клиентами и их классами обслуживания (скоростями). 
+> 
+>
+> [Оригинал wg-easy тут](https://github.com/wg-easy/wg-easy).
+
+
 [![Build & Publish latest Image](https://github.com/wg-easy/wg-easy/actions/workflows/deploy.yml/badge.svg)](https://github.com/wg-easy/wg-easy/actions/workflows/deploy.yml)
 [![Lint](https://github.com/wg-easy/wg-easy/actions/workflows/lint.yml/badge.svg?branch=master)](https://github.com/wg-easy/wg-easy/actions/workflows/lint.yml)
 [![GitHub Stars](https://img.shields.io/github/stars/wg-easy/wg-easy)](https://github.com/wg-easy/wg-easy/stargazers)
